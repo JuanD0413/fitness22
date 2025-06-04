@@ -1,0 +1,89 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fitness22</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <header class="bg-black text-white p-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Fitness22</h1>
+      <nav class="space-x-4">
+        <a href="#servicios" class="hover:underline">Servicios</a>
+        <a href="#planes" class="hover:underline">Planes</a>
+        <a href="#contacto" class="hover:underline">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section
+        class="bg-cover bg-center h-[400px] flex items-center justify-center text-white text-center"
+        style="background-image: url('https://source.unsplash.com/1600x900/?gym');"
+      >
+        <div class="bg-black bg-opacity-60 p-6 rounded">
+          <h2 class="text-4xl font-bold mb-4">
+            ¡Transforma tu cuerpo con Fitness22!
+          </h2>
+          <a
+            href="https://wa.me/573217897122"
+            target="_blank"
+            class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded"
+          >
+            Agendar clase gratis por WhatsApp
+          </a>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section id="servicios" class="p-8 bg-white text-center">
+        <h3 class="text-3xl font-bold mb-6">Nuestros Servicios</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 border rounded">💪 Pesas</div>
+          <div class="p-4 border rounded">🧘 Clases dirigidas</div>
+          <div class="p-4 border rounded">🏃 Cardio</div>
+        </div>
+      </section>
+
+      <!-- Planes -->
+      <section id="planes" class="p-8 bg-gray-100 text-center">
+        <h3 class="text-3xl font-bold mb-6">Planes de Membresía</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-6 bg-white rounded shadow">
+            <h4 class="text-xl font-bold">Básico</h4>
+            <p>$80.000/mes</p>
+          </div>
+          <div class="p-6 bg-white rounded shadow">
+            <h4 class="text-xl font-bold">Full</h4>
+            <p>$120.000/mes</p>
+          </div>
+          <div class="p-6 bg-white rounded shadow">
+            <h4 class="text-xl font-bold">Premium</h4>
+            <p>$150.000/mes</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contacto" class="p-8 bg-white text-center">
+        <h3 class="text-3xl font-bold mb-6">Contáctanos</h3>
+        <p>📍 Calle 123 # 45-67, Bogotá</p>
+        <p>📞 300 000 0000</p>
+        <a
+          href="https://wa.me/573217897122"
+          target="_blank"
+          class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded"
+        >
+          Habla con nosotros por WhatsApp
+        </a>
+      </section>
+    </main>
+
+    <footer class="bg-black text-white text-center p-4">
+      &copy; 2025 Fitness22. Todos los derechos reservados.
+    </footer>
+  </body>
+</html>
