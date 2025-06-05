@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import "../styles/global.css";
 ---
 
@@ -8,7 +9,7 @@ import "../styles/global.css";
     <title>Fitness22</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body class="bg-gray-100 text-gray-800">
+  <body class="bg-gray-900 text-gray-900 sticky">
     <header class="bg-black text-white p-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">Fitness22</h1>
       <nav class="space-x-4">
@@ -21,18 +22,28 @@ import "../styles/global.css";
     <main>
       <!-- Hero -->
       <section
-        class="bg-cover bg-center h-[400px] flex items-center justify-center text-white text-center"
+        class="bg-cover bg-center h-[600px] flex items-center justify-center text-white text-center"
         style="background-image: url('/hero.jpg');"
       >
-        <div class="bg-black bg-opacity-60 p-6 rounded">
+        <div class="w-1/2 bg-black bg-opacity-40 p-6 rounded">
           <h2 class="text-4xl font-bold mb-4">#Entrenateparalavida</h2>
           <a
             href="https://wa.me/573217897122"
             target="_blank"
             class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded"
           >
-            Agendar clase gratis por WhatsApp
+            Agendar valoración gratis
           </a>
+        </div>
+        <div class="w-1/2 inset-0 flex items-center justify-center">
+          <video
+            src="/hero.mp4"
+            autoplay="true"
+            controls="false"
+            class="w-100 h-100 rounded-lg shadow-lg"
+            loop
+            muted
+            playsinline></video>
         </div>
       </section>
 
@@ -47,20 +58,40 @@ import "../styles/global.css";
       </section>
 
       <!-- Planes -->
-      <section id="planes" class="p-8 bg-gray-100 text-center">
-        <h3 class="text-3xl font-bold mb-6">Planes de Membresía</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div class="p-6 bg-white rounded shadow">
-            <h4 class="text-xl font-bold">Básico</h4>
-            <p>$80.000/mes</p>
-          </div>
-          <div class="p-6 bg-white rounded shadow">
-            <h4 class="text-xl font-bold">Full</h4>
-            <p>$120.000/mes</p>
-          </div>
-          <div class="p-6 bg-white rounded shadow">
-            <h4 class="text-xl font-bold">Premium</h4>
-            <p>$150.000/mes</p>
+      <section
+        id="planes"
+        class="flex flex-col justify-content p-8 bg-gray-900 text-center"
+      >
+        <h3 class="text-3xl font-bold mb-6 text-orange-300">
+          ¡Nuestros Planes! <br />-2025-
+        </h3>
+        <!--Precios tipo tabla -->
+        <div class="w-100 mx-auto">
+          <div class="p-4 text-white">
+            <ul class="list-disc list-inside mb-4 text-white my-4">
+              <li class="p-2 border-b border-b-orange-400">Dia: $ 10.000</li>
+              <li class="p-2 border-b border-b-orange-400">
+                Quincena: $ 44.000
+              </li>
+              <li class="p-2 border-b border-b-orange-400">Mes: $ 74.000</li>
+              <li class="p-2 border-b border-b-orange-400">
+                Bimestre: $ 132.000
+              </li>
+              <li class="p-2 border-b border-b-orange-400">
+                Trimestre: $ 177.000
+              </li>
+              <li class="p-2 border-b border-b-orange-400">
+                Semestre: $ 333.000
+              </li>
+              <li>Año: $ 592.000</li>
+            </ul>
+            <a
+              href="https://wa.me/573217897122"
+              target="_blank"
+              class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded"
+            >
+              Agendar valoración gratis
+            </a>
           </div>
         </div>
       </section>
@@ -80,28 +111,28 @@ import "../styles/global.css";
       </section>
 
       <!-- Testimonios -->
-      <section class="p-8 bg-gray-200 text-center">
-        <h3 class="text-3xl font-bold mb-6">Testimonios</h3>
+      <section class="p-8 bg-gray-900 text-center">
+        <h3 class="text-3xl font-bold mb-6 text-orange-300">Testimonios</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="p-4 border rounded">
+          <div class="p-4 border rounded text-white">
             <p>
               "¡El mejor gimnasio de la ciudad! Me encanta el ambiente y las
               clases."
             </p>
-            <p class="mt-2 font-semibold">- Ana Pérez</p>
+            <p class="mt-2 font-semibold text-orange-300">- Ana Pérez</p>
           </div>
-          <div class="p-4 border rounded">
+          <div class="p-4 border rounded text-white">
             <p>
               "Los entrenadores son muy profesionales y siempre están dispuestos
               a ayudar."
             </p>
-            <p class="mt-2 font-semibold">- Carlos Gómez</p>
+            <p class="mt-2 font-semibold text-orange-300">- Carlos Gómez</p>
           </div>
         </div>
       </section>
 
       <!--map -->
-      <section class="p-8 bg-white text-center">
+      <section class="bg-white text-center">
         <div class="w-full h-64">
           <iframe
             class="w-full h-full"
@@ -112,19 +143,17 @@ import "../styles/global.css";
       </section>
 
       <!-- Redes Sociales -->
-      <section class="p-8 bg-gray-200 text-center">
+      <section class="p-8 bg-gray-900 text-center">
         <h3 class="text-3xl font-bold mb-6">Síguenos en Redes Sociales</h3>
         <div class="flex justify-center space-x-4">
           <a
             href="https://www.facebook.com/Fitness22"
             target="_blank"
-            class="text-blue-600 hover:underline">Facebook</a
-          >
+            class="text-blue-600 hover:underline"></a>
           <a
             href="https://www.instagram.com/Fitness22"
             target="_blank"
-            class="text-pink-600 hover:underline">Instagram</a
-          >
+            class="text-pink-600 hover:underline"></a>
         </div>
       </section>
     </main>
